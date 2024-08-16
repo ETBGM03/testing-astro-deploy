@@ -1,0 +1,25 @@
+---
+const items = [
+  { id: 1, icon: '/assets/icons/whatsapp.svg', text: "Personalized attention with guarantee." },
+  { id: 2, icon: '/assets/icons/service_car.svg', text: "Turn services into experiences." },
+  { id: 3, icon: '/assets/icons/road.svg', text: "You will optimize and make the most of your time." },
+];
+---
+
+<section class="flex items-center flex-col">
+    <h2 class="text-white text-center font-poppins text-[43px] font-semibold leading-[71px]">WHY US?</h2>
+    <div class="mt-8">
+        <p class="text-white text-center max-w-[946px] font-poppins text-[23px] font-normal"
+        >At Gustavo's auto shop, you will enjoy the professional experience of an expert mechanic, personalized attention, quality work with modern parts and equipment, transparency in diagnostics, fast and efficient service, competitive prices, and a guarantee in our repairs, all in a pleasant and professional environment.</p>
+    </div>
+    <div class="grid grid-cols-3 mt-[191px] gap-x-36 items-center space-y-4">
+        {items.map(({icon, text}) => (
+            <div class="flex flex-col items-center max-w-[276px]">
+                <img src={icon} alt="Icon" class="w-12 h-12 mb-2" />
+                <p class="text-[#088F00] text-center font-poppins text-[22px] font-semibold leading-[30px]">
+                    {text}
+                </p>
+            </div>
+        ))}
+    </div>
+</section>

@@ -1,0 +1,93 @@
+---
+
+
+const dataInfo = [
+    {
+        source: '/assets/icons/email.svg', 
+        label: {
+            title: 'EMAIL ADDRESS',
+            value: 'gustavo@automotriz.com'
+        }
+    },
+    {
+        source: '/assets/icons/phone.svg', 
+        label: {
+            title: 'PHONE',
+            value: '+1 (000) 000 0000'
+        }
+    },
+    {
+        source: '/assets/icons/location.svg', 
+        label: {
+            title: 'LOCATION',
+            value: '000000000000000000000000'
+        }
+    },
+]
+
+export const socialIcons = [
+  {
+    id: 1,
+    icon: {
+      label: "instagram",
+      source: '/assets/icons/phone.svg',
+      href: "https://miro.com/es/",
+      target: "_blank",
+    },
+  },
+  {
+    id: 2,
+    icon: {
+      label: "facebook",
+      source: '/assets/icons/phone.svg',
+      href: "https://miro.com/es/",
+      target: "_blank",
+    },
+  },
+  {
+    id: 3,
+    icon: {
+      label: "tiktok",
+      source: '/assets/icons/phone.svg',
+      href: "https://miro.com/es/",
+      target: "_blank",
+    },
+  },
+];
+
+
+
+---
+
+
+
+
+<footer class="min-h-[546px] flex items-center justify-between px-[90px]">
+    <img src="/assets/icons/logo_footer.svg" alt="logo">
+
+    <div class="flex flex-col gap-y-6">
+        {dataInfo.map((item) => (
+            <div class="flex items-center gap-x-10">
+                <img src={item.source} alt="icon" class="w-10 h-10" />
+                <div>
+                    <h3 class="text-white font-poppins text-[20px] font-normal">
+                        {item.label.title}
+                    </h3>
+                    <span class="text-white font-poppins text-[20px] font-normal leading-normal">
+                        {item.label.value}
+                    </span>
+                </div>
+            </div>
+        ))}
+    </div>
+
+    <div class="flex gap-x-6">
+        {socialIcons.map((item) => (
+            <a href={item.icon.href} class="w-8 h-8">
+              <img src={item.icon.source} alt={item.icon.label} />
+            </a>
+        ))}
+    </div>
+
+
+</footer>
