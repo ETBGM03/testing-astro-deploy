@@ -30,7 +30,6 @@ import NavBar from "../molecules/NavBar.astro";
   
     window.addEventListener("scroll", handleScroll);
       
-      // Limpieza del listener cuando el componente se desmonta
     window.addEventListener("beforeunload", () => {
         window.removeEventListener("scroll", handleScroll);
     });
