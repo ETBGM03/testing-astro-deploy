@@ -1,0 +1,21 @@
+---
+import Gallery from "src/components/molecules/Gallery.astro";
+import Header from "src/components/sections/Header.astro";
+import Layout from "src/layouts/Layout.astro";
+
+import {images} from './constant'
+
+---
+
+<Layout title="Our Services">
+    <Header />
+    <main>
+        <div class="mt-[70px]">
+
+            <h2 class="text-white text-center font-poppins text-[58px] font-semibold leading-[71px] uppercase">SERVICES</h2>
+        </div>
+        <div class="flex items-center mt-20 justify-center py-4">
+            <Gallery images={images} />
+        </div>
+    </main>
+</Layout>

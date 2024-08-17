@@ -1,0 +1,19 @@
+---
+import GalleryItem from "../atoms/GalleryItem.astro"
+
+interface Props {
+    images: {
+        source: string
+        textOverlay: string
+    }[]
+}
+
+
+const {images} = Astro.props
+---
+
+<section class="grid grid-cols-1 max-w-6xl sm:grid-cols-2 lg:grid-cols-3 gap-10">
+  {images.map((props) => (
+     <GalleryItem {...props} />
+  ))}
+</section>
