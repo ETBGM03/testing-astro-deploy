@@ -1,11 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from 'src/layouts/Layout.astro';
 import WhyUs from 'src/components/sections/WhyUs.astro';
 import CarHome from 'src/components/sections/CarHome.astro';
+import Header from 'src/components/sections/Header.astro';
+import Hero from 'src/components/sections/Hero.astro';
 ---
 
 <Layout title="Gustavo Mechanic">
+	<div class="relative flex flex-col h-[380px] w-full overflow-hidden md:h-[573px] lg:h-[817px]">
+		<div class="hidden md:block absolute inset-0 w-full -z-10">
+		  <img
+			src="/assets/bg_header.jpg"
+			alt="background hero"
+			class="pointer-events-none absolute w-full h-full inset-0 object-cover object-top"
+		  />
+		</div>
+		<Header />
+		<Hero />
+	</div>
 	<main>
 		<WhyUs />
 		<CarHome />

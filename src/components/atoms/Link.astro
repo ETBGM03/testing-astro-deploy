@@ -1,0 +1,13 @@
+---
+interface Props {
+  to: string;
+  name: string;
+  className?: string
+}
+
+const { to, name, className } = Astro.props;
+---
+
+<a href={to} class={`font-poppins text-[23px] capitalize ${className}`}>
+  {name}
+</a>

@@ -1,0 +1,49 @@
+---
+import Link from "../atoms/Link.astro";
+
+
+const {pathname} = Astro.url
+
+export const dataHeaderLinks = [
+  {
+    id: 1,
+    to: "/",
+    name: "Home",
+  },
+  {
+    id: 2,
+    to: "/about",
+    name: "about",
+  },
+  {
+    id: 3,
+    to: "/services",
+    name: "Services",
+  },
+  {
+    id: 4,
+    to: "/contact",
+    name: "Contact",
+  },
+];
+
+---
+<!--  -->
+
+
+<nav class="flex items-center justify-end gap-x-[52px] flex-1 w-full">
+    <div class="flex gap-x-12">
+      {dataHeaderLinks.map(({ name, to }) => {
+        const isActive = pathname === to;
+        return <Link name={name} to={to} className={`${isActive ? "text-primary font-bold" : "text-white font-normal"}`}  />
+      })}
+
+      </div>
+      <div>
+        <button
+          class="bg-primary w-full text-white text-center font-montserrat text-[19px] font-bold px-8 py-2 rounded-[22px] bg-gradient-to-r from-[#045000] via-[#3ABD00] to-[#045000]"
+        >
+        Learn more
+        </button>
+      </div>
+</div>
