@@ -9,13 +9,13 @@ const {source, textOverlay} = Astro.props
 
 ---
 
-<div class="relative overflow-hidden group w-[375px] h-[468px] rounded-[20px]">
+<div class="relative overflow-hidden group w-full max-h-[195px] md:max-h-[292px] lg:w-[375px] md:h-[468px] lg:max-h-max rounded-[20px]">
     <img
       src={source}
       alt="Gallery item"
       class="w-full h-full object-cover"
     />
-    <div class="absolute inset-0 bg-black bg-opacity-[0.60] flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
+    <div class="absolute inset-0 bg-black bg-opacity-[0.60] flex items-center justify-center transform translate-x-[200%] group-hover:translate-x-0 transition-transform duration-500">
       <span class="text-white text-center font-poppins text-[31px] font-semibold leading-[45px]">{textOverlay}</span>
     </div>
   </div>
