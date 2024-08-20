@@ -1,3 +1,9 @@
-<div class="w-full h-full bg-black mt-[204px]">
-    <img src="/assets/bg_carHome.webp" alt="car home" class="bg-black">
+---
+import { Image } from "astro:assets";
+
+import carHome from '../../../public/assets/bg_carHome.webp'
+---
+
+<div class="w-full h-full bg-black mt-[128px] lg:mt-[204px]">
+    <Image src={carHome} alt="car home" decoding="async" loading='eager' />
 </div>

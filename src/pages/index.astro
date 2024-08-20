@@ -1,20 +1,33 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from 'src/layouts/Layout.astro';
 import WhyUs from 'src/components/sections/WhyUs.astro';
 import CarHome from 'src/components/sections/CarHome.astro';
 import Header from 'src/components/sections/Header.astro';
 import Hero from 'src/components/sections/Hero.astro';
+import bg_header from '../../public/assets/bg_header.jpg';
+import bg_header_responsive from '../../public/assets/bg_header_responsive.jpg';
+
 ---
 
 <Layout title="Gustavo Mechanic">
-	<div class="relative flex flex-col h-[380px] w-full overflow-hidden md:h-[573px] lg:h-[817px]">
+	<div class="relative flex flex-col h-[420px] w-full overflow-hidden md:h-[573px] lg:h-[817px]">
 		<div class="hidden md:block absolute inset-0 w-full -z-10">
-		  <img
-			src="/assets/bg_header.jpg"
+		  <Image
+			src={bg_header}
 			alt="background hero"
+			loading='eager'
 			class="pointer-events-none absolute w-full h-full inset-0 object-cover object-top"
 		  />
 		</div>
+		<div class="block md:hidden absolute inset-0 w-full -z-0">
+			<Image
+			  src={bg_header_responsive}
+			  alt="hero"
+			  class="pointer-events-none absolute w-full h-full inset-0 object-cover object-center"
+			/>
+		  </div>
 		<Header />
 		<Hero />
 	</div>

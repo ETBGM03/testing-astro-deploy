@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import NavBar from "../molecules/NavBar.astro";
+import LogoHeader from '../../../public/assets/icons/logo_header.svg'
 ---
 
-<header id="scroll-header" class="w-full sticky top-0 z-20 flex items-center py-1 px-8 mt-10 max-h-20 justify-between transition-all duration-300">
-    <img src="/assets/icons/logo_header.svg" alt="logo header">
-    <NavBar />
+<header id="scroll-header" class="w-full sticky top-0 z-20 bg-emerald-600 flex items-center py-1 lg:px-8 mt-10 justify-between transition-all duration-300">
+    <Image src={LogoHeader} alt="logo header" decoding="async" loading="eager" class="w-[256px] h-[57px]">
+    <NavBar /> 
 </header>
 
 <style>
