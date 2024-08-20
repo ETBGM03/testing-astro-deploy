@@ -1,13 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 
-import Layout from 'src/layouts/Layout.astro';
 import WhyUs from 'src/components/sections/WhyUs.astro';
 import CarHome from 'src/components/sections/CarHome.astro';
 import Header from 'src/components/sections/Header.astro';
 import Hero from 'src/components/sections/Hero.astro';
 import bg_header from '../../public/assets/bg_header.jpg';
 import bg_header_responsive from '../../public/assets/bg_header_responsive.jpg';
+import { Layout } from '@layouts';
 
 ---
 
@@ -27,7 +27,7 @@ import bg_header_responsive from '../../public/assets/bg_header_responsive.jpg';
 			  alt="hero"
 			  class="pointer-events-none absolute w-full h-full inset-0 object-cover object-center"
 			/>
-		  </div>
+		</div>
 		<Header />
 		<Hero />
 	</div>
