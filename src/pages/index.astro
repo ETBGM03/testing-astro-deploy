@@ -1,14 +1,12 @@
 ---
+import CarHome from '@components/sections/CarHome.astro';
+import Header from '@components/sections/Header.astro';
+import Hero from '@components/sections/Hero.astro';
+import WhyUs from '@components/sections/WhyUs.astro';
 import { Image } from 'astro:assets';
-
-import WhyUs from 'src/components/sections/WhyUs.astro';
-import CarHome from 'src/components/sections/CarHome.astro';
-import Header from 'src/components/sections/Header.astro';
-import Hero from 'src/components/sections/Hero.astro';
-import bg_header from '../../public/assets/bg_header.jpg';
-import bg_header_responsive from '../../public/assets/bg_header_responsive.jpg';
-import { Layout } from '@layouts';
-
+import { Layout } from 'src/layouts';
+import bg_header_responsive from '/public/assets/bg_header_responsive.jpg';
+import bg_header from '/public/assets/bg_header.jpg';
 ---
 
 <Layout title="Gustavo Mechanic">

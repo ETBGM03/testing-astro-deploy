@@ -3,12 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components": ["./src/component/index.ts"],
-      "@layouts": ["./src/layouts/index.ts"],
-      "@libs": ["./src/libs/index.ts"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
-  "exclude": [
-    "public"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
 }
