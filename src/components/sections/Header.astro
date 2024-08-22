@@ -1,6 +1,4 @@
 ---
-import { Image} from "astro:assets";
-import LogoHeader from '/public/assets/icons/logo_header.svg'
 import { dataHeaderLinks } from "../molecules/constants";
 
 
@@ -12,7 +10,7 @@ const {pathname} = Astro.url
 
   <header id="scroll-header" class="w-full sticky top-0 z-20 flex items-center py-1 px-5 lg:px-14 mt-10 justify-between transition-all duration-300">
     <div>
-      <Image src={LogoHeader} alt="logo header" decoding="async" loading="eager" class="max-w-[186px] h-[57px] md:max-w-[149px] lg:max-w-[256px] md:h-[71px]" />
+      <img src="/public/assets/icons/logo_header.svg" alt="logo header" decoding="async" loading="eager" class="max-w-[186px] h-[57px] md:max-w-[149px] lg:max-w-[256px] md:h-[71px]" />
     </div>
     <NavBar />
   </header>
